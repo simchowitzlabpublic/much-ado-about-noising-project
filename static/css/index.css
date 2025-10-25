@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   color: var(--text-primary);
   line-height: 1.6;
   font-size: 16px;
@@ -41,6 +41,50 @@ body {
 /* All titles and subtitles should be white */
 .title, .subtitle, h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
+}
+
+/* Keyword highlighting styles - brighter colors for better visibility on dark theme */
+.keyword-highlight-primary {
+  color: #FF4444;
+  font-weight: 600;
+}
+
+.keyword-highlight-contrary {
+  color: #44D4D4;
+  font-weight: 600;
+}
+
+/* Callout blocks for notes and insights */
+.callout {
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  border-radius: 8px;
+  background-color: var(--background-secondary);
+}
+
+.callout-note {
+  border-left-color: #44D4D4;
+  background-color: rgba(68, 212, 212, 0.1);
+}
+
+.callout-note strong {
+  color: #44D4D4;
+}
+
+.callout-insight {
+  border-left-color: #FF4444;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+.callout-insight strong {
+  color: #FF4444;
+}
+
+.callout p {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 
@@ -55,7 +99,7 @@ body {
 }
 
 .button.is-dark {
-  background: var(--text-primary) !important;
+  background: var(--background-accent) !important;
   border: none !important;
   color: white !important;
   box-shadow: var(--shadow-md);
@@ -81,6 +125,13 @@ body {
 .footer .icon-link:hover {
     color: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+.link-block {
+    background: var(--background-accent);
+    border-radius: var(--border-radius);
+    padding: 4px;
+    display: inline-block;
 }
 
 .link-block a {
@@ -114,13 +165,13 @@ body {
 }
 
 .teaser {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 
 /* Publication Content Styling */
 .publication-title {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
     font-weight: 800 !important;
     color: #ffffff !important;
     margin-bottom: 2rem !important;
@@ -151,7 +202,7 @@ body {
 }
 
 .publication-authors {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
@@ -316,7 +367,7 @@ body {
 
 /* Section Titles */
 .title.is-3 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
   font-weight: 700 !important;
   color: #ffffff !important;
   margin-bottom: 2rem !important;
@@ -487,7 +538,7 @@ code {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .more-works-btn:hover {

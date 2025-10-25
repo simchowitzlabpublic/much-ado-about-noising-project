@@ -49,11 +49,16 @@
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
@@ -75,8 +80,8 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">MUCH ADO ABOUT NOISING: DO FLOW MODELS ACTUALLY MAKE BETTER
-                CONTROL POLICIES?</h1>
+              <h1 class="title is-1 publication-title">Much Ado About Nosing: Dispelling the Myths of Generative Robotic
+                Control</h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">Anonymous authors</span>
               </div>
@@ -104,9 +109,14 @@
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="https://example.com/data" class="external-link button is-dark">
+                    <a href="https://huggingface.co/datasets/DATASET_NAME" class="external-link button is-dark">
                       <span class="icon">
-                        <i class="fas fa-database"></i>
+                        <svg class="svg-inline--fa" style="height: 1em; width: 1em; fill: currentColor;" viewBox="0 0 95 88" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M47.21,76.5a11.14,11.14,0,1,0,0-22.27,11.14,11.14,0,1,0,0,22.27Z"/>
+                          <path d="M83.14,42.82a11.14,11.14,0,1,0,0,22.27,11.14,11.14,0,1,0,0-22.27Z"/>
+                          <path d="M11.14,42.82a11.14,11.14,0,1,0,0,22.27,11.14,11.14,0,1,0,0-22.27Z"/>
+                          <path d="M83,28.18c-.5-11.11-6.5-20.9-15.82-26.45A34.72,34.72,0,0,0,47.5,0a34.87,34.87,0,0,0-20,.63C17.86,6.18,11.86,16,11.36,27.09v.27c-6.14,2.27-10.18,8.09-9.77,14.77s5.09,12.09,11.5,13.59v.09c.5,11.09,6.5,20.91,15.82,26.45a34.7,34.7,0,0,0,19.59,1.09c9.64-1.45,17.77-7.82,21.91-17.18,2.36-5.36,3.18-11.18,2.59-16.91,6.13-2.27,10.18-8.09,9.77-14.77S89.68,22.41,83.27,20.91C83.18,20.91,83.09,28.09,83,28.18ZM69.23,70.73c-2.73,6.27-7.64,11.09-13.68,13.77-11.86,5.27-25.77,1.73-33.5-8.45-4.18-5.55-6.27-12.36-5.91-19.27.09-1.73-1.18-3.18-2.86-3.27s-3.18,1.18-3.27,2.86c0,.14,0,.27,0,.41-.64,8.18,1.86,16.27,7,22.73,9.5,12.54,27.09,16.63,41.45,9.68,7.36-3.27,13.27-9.09,16.68-16.54.82-1.55.18-3.45-1.36-4.27s-3.45-.18-4.27,1.36A3.33,3.33,0,0,1,69.23,70.73Zm4.64-37.09c-.45,8.18-4.77,15.68-11.59,20.18-1.5,1-1.91,3.09-.86,4.59s3.09,1.91,4.59.86c8.27-5.45,13.5-14.45,14.09-24.18.09-1.73-1.18-3.18-2.86-3.27s-3.18,1.18-3.27,2.86C73.86,33.82,73.86,33.73,73.86,33.64Zm-53.18,0c-.09-8.18,4.23-15.68,11.5-20.18,1.5-1,1.91-3.09.86-4.59s-3.09-1.91-4.59-.86c-8.77,5.45-14,15.27-14.09,25,.09,1.73,1.59,3.09,3.32,3s3.09-1.59,3-3.32Z"/>
+                        </svg>
                       </span>
                       <span>Data</span>
                     </a>
@@ -142,21 +152,22 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Generative models, like flows and diffusions, have recently emerged as popular
-                and efficacious policy parameterizations in robotics. There has been much spec-
-                ulation as to the factors underlying their successes, ranging from capturing multi-
-                mode action distribution to expressing more complex behaviors. In this work, we
-                perform a comprehensive evaluation of popular generative control policies (GCPs)
-                on common behavior cloning (BC) benchmarks. We find that GCPs do not owe
-                their success to their ability to capture multi-modality or to express more com-
-                plex observation-to-action mappings. Instead, we find that their advantage stems
-                from iterative computation provided that intermediate computation steps receive
-                supervision during training, and that this supervision is combined with an appro-
-                priate degree of stochasticity. As a validation of our findings, we show that a
-                minimal iterative policy (MIP), a lightweight two-step regression-based policy,
-                essentially matches the performance of flow GCPs. Our results suggest that the
-                distribution-fitting component of GCPs is less salient than commonly believed,
-                and point toward new design spaces focusing solely on control performance.
+                Generative models, like flows and diffusions, have recently emerged as popular and efficacious policy
+                parameterizations in robotics. There has been much speculation as to the factors underlying their
+                successes, ranging from capturing multi-modal action distribution to expressing more complex behaviors.
+                In this work, we perform a comprehensive evaluation of popular generative control policies (GCPs) on
+                common behavior cloning (BC) benchmarks.
+                We find that GCPs <span class="keyword-highlight-contrary">do not</span> owe their success to their
+                ability to capture <span class="keyword-highlight-contrary">multi-modality</span> or to express more
+                complex observation-to-action mappings.
+                Instead, we find that their advantage stems from <span class="keyword-highlight-primary">iterative
+                  computation</span>, as long as intermediate steps are supervised during training and this supervision
+                is paired with a suitable level of <span class="keyword-highlight-primary">stochasticity</span>.
+                As a validation of our findings, we show that a <span class="keyword-highlight-primary">minimal
+                  iterative policy</span> (MIP), a lightweight two-step regression-based policy, essentially matches the
+                performance of flow GCPs.
+                Our results suggest that the distribution-fitting component of GCPs is less salient than commonly
+                believed, and point toward new design spaces focusing solely on control performance.
               </p>
             </div>
           </div>
@@ -164,6 +175,99 @@
       </div>
     </section>
     <!-- End paper abstract -->
+
+    <!-- Finding 1 -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Finding 1: Neither multi-modality nor policy expressivity account for GCPs' success
+            </h2>
+            <div class="content has-text-justified">
+              <p>
+                Through careful benchmarking over 27 tasks with 3 different input modalities (state, image, point
+                cloud), we found:
+              </p>
+              <ol>
+                <li>With proper architecture, regression ≈ flow in most tasks</li>
+                <li>Flow mainly wins in high precision tasks</li>
+                <li>Neither multi-modality nor policy expressivity account for GCPs' success</li>
+              </ol>
+              <figure class="image">
+                <img src="static/images/performance.png" alt="Performance comparison across tasks" />
+              </figure>
+              <div class="callout callout-note">
+                <p><strong>Note:</strong> Carefully aligning the architecture and training procedure between RCP and
+                  GCPs is important.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Finding 1 -->
+
+    <!-- Finding 2 -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Finding 2: Noise injection and supervised iterative compute is the key</h2>
+            <div class="content has-text-justified">
+              <p>
+                Given a common GCP architecture, we first expose the key ingredient of GCPs:
+              </p>
+              <figure class="image">
+                <img src="static/images/gcp_architecture.png" alt="GCP Architecture" />
+              </figure>
+              <p class="mt-4">
+                We then systematically identify the critical components:
+              </p>
+              <figure class="image">
+                <img src="static/images/key_ingredient.png" alt="Key ingredients of GCPs" />
+              </figure>
+              <p class="mt-4">
+                After benchmarking on 7 most challenging tasks, we found: <strong>supervised iterative compute +
+                  stochasticity injection is the key</strong>.
+              </p>
+              <figure class="image">
+                <img src="static/images/result.png" alt="Results showing key findings" />
+              </figure>
+              <div class="callout callout-note">
+                <p><strong>Note:</strong> For control problems, distribution fitting is less important for final
+                  performance. Instead of focusing on action generation itself, it is more important to explore the
+                  design space of the mapping from observation to action.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Finding 2 -->
+
+    <!-- Finding 3 -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Finding 3: Manifold adherence given out-of-distribution observations is the key</h2>
+            <div class="content has-text-justified">
+              <p>
+                What benefit do stochasticity injection and supervised iterative compute bring?
+              </p>
+              <p>
+                We found that it mainly helps the policy to adhere to the manifold of the expert data given <span
+                  class="keyword-highlight-primary">out-of-distribution</span> observations.
+              </p>
+              <figure class="image">
+                <img src="static/images/manifold_adherence.png" alt="Manifold adherence visualization" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Finding 3 -->
 
 
     <!-- Removed carousels -->
