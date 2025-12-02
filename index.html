@@ -187,6 +187,14 @@
                       <span>Checkpoints</span>
                     </a>
                   </span>
+                  <span class="link-block">
+                    <a href="static/pdf/much_ado_about_noising.pdf" class="external-link button is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>PDF</span>
+                    </a>
+                  </span>
 
                 </div>
               </div>
@@ -199,8 +207,24 @@
     </section>
 
 
-    <!-- Teaser image -->
+    <!-- Teaser Video -->
     <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <video id="teaser-video" controls loop playsinline style="width: 100%; border-radius: 10px;">
+            <source src="static/videos/teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+            Teaser video demonstrating our key findings on generative control policies.
+          </h2>
+        </div>
+      </div>
+    </section>
+    <!-- End Teaser Video -->
+
+    <!-- Teaser image -->
+    <section class="hero">
       <div class="container is-max-desktop">
         <div class="hero-body">
           <figure class="image">
@@ -248,12 +272,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full">
-            <h2 class="title is-3">Finding 1: Neither multi-modality nor policy expressivity account for GCPs' success
+            <h2 class="title is-3">Finding 1: Neither multi-modality nor policy expressivity account for generative control policies' success
             </h2>
             <div class="content has-text-justified">
               <p>
-                Through careful benchmarking over 27 tasks with 3 different input modalities (state, image, point
-                cloud), we found:
+                Through careful benchmarking over 28 tasks with 3 different input modalities (state, image, point cloud, language) even <span class="keyword-highlight-primary">with pretrained VLAs</span>, we found:
               </p>
               <ol>
                 <li>With proper architecture, regression ≈ flow in most tasks</li>
@@ -282,7 +305,8 @@
             <h2 class="title is-3">Finding 2: Noise injection and supervised iterative compute drives the success</h2>
             <div class="content has-text-justified">
               <p>
-                Given a common GCP architecture, we first expose the key ingredient of GCPs:
+                But what drives the success of GCPs on these tasks?
+                Given a common GCP architecture, we first expose the key design ingredient of GCPs:
               </p>
               <figure class="image">
                 <img src="static/images/gcp_architecture.png" alt="GCP Architecture" />
@@ -325,6 +349,7 @@
               <p>
                 We found that it mainly helps the policy to adhere to the manifold of the expert data given <span
                   class="keyword-highlight-primary">out-of-distribution</span> observations.
+                  Given a new situation, the policy can still do something reasonable, rather than falling into a bad action mode.
               </p>
               <figure class="image">
                 <img src="static/images/manifold_adherence.png" alt="Manifold adherence visualization" />
@@ -355,8 +380,22 @@
     <!-- Removed PDF poster viewer -->
 
 
-
-    <!-- Removed BibTeX section for anonymity -->
+    <!-- BibTeX Section -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>@article{pan2025adonoisingdispellingmyths,
+      title={Much Ado About Noising: Dispelling the Myths of Generative Robotic Control}, 
+      author={Chaoyi Pan and Giri Anantharaman and Nai-Chieh Huang and Claire Jin and Daniel Pfrommer and Chenyang Yuan and Frank Permenter and Guannan Qu and Nicholas Boffi and Guanya Shi and Max Simchowitz},
+      year={2025},
+      eprint={2512.01809},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2512.01809}, 
+}</code></pre>
+      </div>
+    </section>
+    <!-- End BibTeX Section -->
 
 
     <footer class="footer">
